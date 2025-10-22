@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import { Routes } from 'react-router-dom'
 import Generator from './components/Generator'
+import Notfound from './Notfound'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Manager/>}/>
       <Route path="/generator" element={<Generator/>}/>
+      <Route path="*" element={<Notfound/>} />
     </Routes>
     <Footer/>
     </>
