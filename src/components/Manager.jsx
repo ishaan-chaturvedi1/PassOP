@@ -32,7 +32,6 @@ const Manager = () => {
 
     const showPassword = () => {
         passwordRef.current.type="text"
-        console.log(ref.current.src)
         if (ref.current.src.includes("/icons/eyecross.png")){
             ref.current.src = "/icons/eye.png";
             passwordRef.current.type = "text";
@@ -48,7 +47,6 @@ const Manager = () => {
             return item.id==id
         })
         deletePassword(id)
-        console.log(passwordTargeted[0])
         setusername(passwordTargeted[0].username);
         setpass(passwordTargeted[0].pass);
         setwebsite(passwordTargeted[0].website);
@@ -58,7 +56,6 @@ const Manager = () => {
         let newPasswords = passwords.filter(item => {
             return item.id != id
         })
-        console.log(typeof (newPasswords))
         setpasswords(newPasswords)
         saveToLs(newPasswords)
     }

@@ -18,11 +18,9 @@
                 let min=Math.ceil(12);
                 let max=Math.floor(25);
                 length=Math.floor(Math.random() * (max - min + 1)) + min
-                console.log(length)
             }
             for(let i = 0;i<=parseInt(length); i++){
                 pass_string = pass_string+letters[Math.floor(Math.random() * letters.length)];
-                console.log(pass_string)
             }     
             setpassword(pass_string)
         }
@@ -38,7 +36,6 @@
             new_letters.push(keyword)
             setLetters(new_letters)
             setkeywords([...keywords, {keyword, id:uuidv4()}])
-            console.log(letters)
             setPassword_length("random")
         }
 
@@ -54,8 +51,6 @@
         }
         function password_length_change(value){
             let num_value = Number(value)
-            console.log(value)
-            console.log(value.length)
             if (value=="random"){
                 return
             }
